@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home • Table Monitor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="tablemonitor_home_MainDish.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+<body>
+<nav class="navbar navbar-custom px-3">
+  <a href="tablemonitor_home.html" class="brand">Ran A Han</a>
+      <div class="d-flex align-items-center">
+        <div class="text-row">
+            <div class="text-col" >
+                <div class="text-top" style="color: white;">Username</div>
+                <div class="text-bottom" style="color: white;">Manager</div>
+            </div>
+        </div>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXg3N3FkdHVwYTk2ZDZueWFkZmhrcjR2ZWlybG1nNG5yd2VtbGlydiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ISOckXUybVfQ4/giphy.gif" class="rounded-circle me-3" alt="profile" style="width:50px; height:50px;" >
+        
+        <span class="material-symbols-outlined" style="color: white;" >notifications</span>
+        <span class="material-symbols-outlined" style="color: white;" >settings</span>
+      </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-3 col-lg-2 sidebar">
+      <h6>FEATURES</h6>
+      <nav class="nav flex-column">
+        <a class="nav-link active" href="tablemonitor_home.html">Menu</a>
+        <a class="nav-link" href="tablemonitor_paybills.html">Pay Bills</a>
+      </nav>
+    </div>
+
+
+    <div class="col-12 col-md-9 col-lg-10 p-4">
+      <h2 class="mb-4">Menu</h2>
+      <br>
+      <div class="category-icons mb-4">
+        <a class="cat" href="tablemonitor_home.html"><span class="material-symbols-outlined">hand_meal</span><br>Special</a>
+        <a class="cat active" href="tablemonitor_home_MainDish.html"><span class="material-symbols-outlined">japanese_curry</span><br>Main Dish</a>
+        <a class="cat" href="tablemonitor_home_SideDish.html"><span class="material-symbols-outlined">washoku</span><br>Side Dish</a>
+        <a class="cat" href="tablemonitor_home_Dessert.html"><span class="material-symbols-outlined">cookie</span><br>Dessert</a>
+        <a class="cat" href="tablemonitor_home_Beverage.html"><span class="material-symbols-outlined">beer_meal</span><br>Beverage</a>
+      </div>
+      <br>
+      <div class="mb-3">
+        <label for="sort" class="form-label me-2">Sort By</label>
+        <select class="form-select sort-mini" id="sort">
+          <option>Price</option>
+          <option>Name</option>
+        </select>
+      </div>
+
+      <div class="row g-4" id="menuContainer">
+        <!-- เมนูจะถูก render ที ่นี่ -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="tablemonitor_home_MainDish.js"></script>
+</body>
+</html>

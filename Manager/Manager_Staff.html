@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ran A Han-Staff</title>
+    <link rel="stylesheet" href="Manager_Staff.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+<body>
+<nav class="navbar navbar-custom px-3">
+  <a href="Manager_Stock.html" class="brand">Ran A Han</a>
+      <div class="d-flex align-items-center">
+        <div class="text-row">
+            <div class="text-col" >
+                <div class="text-top" style="color: white;">Username</div>
+                <div class="text-bottom" style="color: white;">Manager</div>
+            </div>
+        </div>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXg3N3FkdHVwYTk2ZDZueWFkZmhrcjR2ZWlybG1nNG5yd2VtbGlydiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ISOckXUybVfQ4/giphy.gif" class="rounded-circle me-3" alt="profile" style="width:50px; height:50px;" >
+        
+        <span class="material-symbols-outlined" style="color: white;" >notifications</span>
+        <span class="material-symbols-outlined" style="color: white;" >settings</span>
+      </div>
+</nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+  <div class="row">
+    <div class="col-12 col-md-3 col-lg-2 sidebar">
+      <h6>FEATURES</h6>
+      <nav class="nav flex-column">
+        <a class="nav-link" href="Manager_Stock.html">Stock</a>
+        <a class="nav-link" href="Manager_Menu.html">Menu</a>
+        <a class="nav-link active" href="Manager_Staff.html">Staff</a>
+        <a class="nav-link" href="Manager_Promotion.html">Promotion</a>
+      </nav>
+    </div>
+
+      <!-- Main content -->
+      <div class="col-10 p-4">
+        <h3 class="fw-bold">Staff Management</h3><br>
+        <!-- Toolbar -->
+        <div class="d-flex mb-3">
+          <input type="text" class="form-control w-25 me-2" placeholder="Search">
+          <button class="btn btn-light me-2">&nbsp;<span class="material-symbols-outlined">calendar_month</span></button>
+          <button class="btn btn-light me-2">Add</button>
+          <button class="btn btn-light me-2">Edit</button>
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Staff ID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Contract Number</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-id="m00201" data-first="Lam" data-last="Damanager"
+                data-email="iamdamanager114@gmail.com" data-phone="081-212-3121"
+                data-role="Manager" data-img="profile1.jpg">
+              <td><div class="avatar">L</div></td>
+              <td>m00201</td>
+              <td>Lam</td>
+              <td>Damanager</td>
+              <td>iamdamanager114@gmail.com</td>
+              <td>081-212-3121</td>
+              <td>Manager</td>
+            </tr>
+            <tr data-id="s00101" data-first="Boi" data-last="Nambaone"
+                data-email="justaboisadT_T@gmail.com" data-phone="082-122-2423"
+                data-role="Staff" data-img="profile2.jpg">
+              <td><div class="avatar">B</div></td>
+              <td>s00101</td>
+              <td>Boi</td>
+              <td>Nambaone</td>
+              <td>justaboisadT_T@gmail.com</td>
+              <td>082-122-2423</td>
+              <td>Staff</td>
+            </tr>
+          </tbody>
+        </table>
+
+    <!-- Full Staff Modal -->
+    <div class="modal fade" id="staffModal" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content p-3">
+          <div class="modal-header border-0">
+            <h2 class="fw-bold" id="modalName">Staff Name</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <!-- Profile Picture -->
+              <div class="col-md-3 text-center">
+                <img id="modalImg" src="" alt="profile" class="img-fluid rounded shadow">
+              </div>
+
+              <!-- Basic Info -->
+              <div class="col-md-5">
+                <h5 class="fw-bold">Basic Info</h5>
+                <p id="modalStaffId"></p>
+                <p id="modalFullName"></p>
+                <p id="modalRole"></p>
+                <p id="modalPhone"></p>
+                <p id="modalEmail"></p>
+              </div>
+
+              <!-- Extra Details -->
+              <div class="col-md-4">
+                <h5 class="fw-bold">Extra Details</h5>
+                <p>Total working hours this week: <strong>24 hrs</strong></p>
+                <p>Days off: <span class="badge bg-warning text-dark">Thursday</span></p>
+                <p>Overtime: None</p>
+              </div>
+            </div>
+
+            <!-- Shift Table -->
+            <h5 class="fw-bold mt-4">Shift Schedule Table / Week</h5>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle text-center">
+                <thead class="table-light">
+                  <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Shift Time</th>
+                    <th>Role</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>13/08/2025</td>
+                    <td><span class="badge bg-warning">Monday</span></td>
+                    <td>09:00–21:00</td>
+                    <td>Staff</td>
+                    <td>Double Shift</td>
+                  </tr>
+                  <tr>
+                    <td>14/08/2025</td>
+                    <td><span class="badge bg-pink">Tuesday</span></td>
+                    <td>09:00–15:00</td>
+                    <td>Staff</td>
+                    <td>Morning shift</td>
+                  </tr>
+                  <tr>
+                    <td>15/08/2025</td>
+                    <td><span class="badge bg-success">Wednesday</span></td>
+                    <td>15:00–21:00</td>
+                    <td>Staff</td>
+                    <td>Evening shift</td>
+                  </tr>
+                  <tr>
+                    <td>16/08/2025</td>
+                    <td><span class="badge bg-orange">Thursday</span></td>
+                    <td>OFF</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>17/08/2025</td>
+                    <td><span class="badge bg-info">Friday</span></td>
+                    <td>09:00–15:00</td>
+                    <td>Staff</td>
+                    <td>Morning shift</td>
+                  </tr>
+                  <tr>
+                    <td>18/08/2025</td>
+                    <td><span class="badge bg-purple">Saturday</span></td>
+                    <td>15:00–21:00</td>
+                    <td>Staff</td>
+                    <td>Evening shift</td>
+                  </tr>
+                  <tr>
+                    <td>19/08/2025</td>
+                    <td><span class="badge bg-danger">Sunday</span></td>
+                    <td>15:00–21:00</td>
+                    <td>Staff</td>
+                    <td>Evening shift</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="modal-footer justify-content-between border-0">
+            <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <div>
+              <button class="btn btn-secondary">Edit</button>
+              <button class="btn btn-success">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</body>
+<script src="Manager_Staff.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>

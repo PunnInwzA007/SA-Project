@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ran A Han-Staff</title>
+    <link rel="stylesheet" href="Manager_Menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+<body>
+<nav class="navbar navbar-custom px-3">
+  <a href="Manager_Stock.html" class="brand">Ran A Han</a>
+      <div class="d-flex align-items-center">
+        <div class="text-row">
+            <div class="text-col" >
+                <div class="text-top" style="color: white;">Username</div>
+                <div class="text-bottom" style="color: white;">Manager</div>
+            </div>
+        </div>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXg3N3FkdHVwYTk2ZDZueWFkZmhrcjR2ZWlybG1nNG5yd2VtbGlydiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ISOckXUybVfQ4/giphy.gif" class="rounded-circle me-3" alt="profile" style="width:50px; height:50px;" >
+        
+        <span class="material-symbols-outlined" style="color: white;" >notifications</span>
+        <span class="material-symbols-outlined" style="color: white;" >settings</span>
+      </div>
+</nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+  <div class="row">
+    <div class="col-12 col-md-3 col-lg-2 sidebar">
+      <h6>FEATURES</h6>
+      <nav class="nav flex-column">
+        <a class="nav-link" href="Manager_Stock.html">Stock</a>
+        <a class="nav-link active" href="Manager_Menu.html">Menu</a>
+        <a class="nav-link" href="Manager_Staff.html">Staff</a>
+        <a class="nav-link" href="Manager_Promotion.html">Promotion</a>
+      </nav>
+    </div>
+
+      <!-- Main content -->
+      <div class="col-10 p-4">
+        <h3 class="fw-bold">Staff Management</h3><br>
+        <!-- Toolbar -->
+        <div class="d-flex mb-3">
+          <input type="text" class="form-control w-25 me-2" placeholder="Search">
+          <button class="btn btn-light me-2">Add</button>
+          <button class="btn btn-light me-2">Edit</button>
+          <select class="form-select w-auto me-2">
+            <option>Category</option>
+          </select>
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Menu ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Price </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="avatar">P</div></td>
+              <td>f001</td>
+              <td>Stir-Fried Minced Pork Holy Basil and Fried Egg</td>
+              <td>Spicy and savory minced pork stir-fried with fragrant holy basil, garlic, 
+                <br>and chili — served hot with jasmine rice and 
+                <br>topped with a crispy fried egg. A true Thai street food classic.</td>
+              <td>Main Dish</td>
+              <td>60 THB</td>
+            </tr>
+            <tr>
+              <td><div class="avatar">B</div></td>
+              <td>f002</td>
+              <td>Stir-Fried Chicken Holy Basil and Fried Egg</td>
+              <td>Tender chicken slices wok-fried with garlic, chili, and holy basil for a 
+                <br>bold flavor — paired perfectly with fluffy rice and a golden fried egg. 
+                <br>Balanced heat, bursting aroma.</td>
+              <td>Main Dish</td>
+              <td>60 THB</td>
+            </tr>
+          </tbody>
+        </table>
+
+    <!-- Full Staff Modal -->
+
+</body>
+<script src="Manager_Menuf.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
