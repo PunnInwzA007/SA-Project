@@ -84,3 +84,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+// เลือก input search และตาราง tbody
+const searchInput = document.querySelector('#staffScheduleModal .form-control');
+const tableRows = document.querySelectorAll('#staffScheduleModal tbody tr');
+
+// ฟังก์ชันค้นหา
+searchInput.addEventListener('input', function() {
+  const filter = searchInput.value.toLowerCase();
+
+  tableRows.forEach(row => {
+    const nameCell = row.cells[0].textContent.toLowerCase();
+    const roleCell = row.cells[1].textContent.toLowerCase();
+
+    // ถ้าเจอชื่อหรือบทบาทตรงกับ search ให้แสดง ถ้าไม่ใช่ซ่อน
+    if (nameCell.includes(filter) || roleCell.includes(filter)) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+});
